@@ -2,21 +2,31 @@ import Image from "next/image";
 import Header from "./HeaderOfPage";
 import MainSection from "./MainSection";
 import Buttonsbtn from "./Buttonsbtn";
+import TasksList from "./list_li";
+
+const showbtninapp = true;
 
 export default function Home() {
+
+  
   return (
     <div className="flex flex-col text-center bg-gray-100 min-h-screen">
       <Header />
-      <div className="flex justify-center gap-4 py-10 w-[80%] mx-auto">
-        <div className="flex flex-col space-y-1 w-[50%]">
-          <MainSection name="Muhammad" lastname="Jack Ali" />
-          <MainSection name="Ali" lastname="Jack Ali" />
-          <MainSection name="Omar" lastname="Elon" />
+      <div className="flex justify-center gap-8 py-12 w-[80%] mx-auto">
+        <div className="flex flex-col space-y-2 w-[60%]">
+          <MainSection/>
         </div>
-        <div className=" w-[30%]">
-          <Buttonsbtn btn=""/>
+        <div className="w-[30%]">
+          <AppSideMenu/>
         </div>
+      </div>
+      <div className="flex justify-center text-black items-center py-8 bg-gray-200 p-6 shadow-md w-full">
+          <TasksList />
       </div>
     </div>
   );
+}
+
+function AppSideMenu() {
+  return showbtninapp ? <Buttonsbtn /> : null;
 }

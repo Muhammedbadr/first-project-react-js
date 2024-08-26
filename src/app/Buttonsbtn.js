@@ -1,16 +1,23 @@
+// interface ButtonProps {
+//   btn?: string;
+// }
 
-export default function Buttonsbtn(btn) {
+export default function Button({ btn = "Not yet" }) {
+  const tasksBtn = [
+    { id: "1", btn: "Add Task" },
+    { id: "2", btn: "Click here" },
+    { id: "3", btn: "Click me" },
+    { id: "4", btn: "Click to join" },
+    { id: "5", btn: "Click to add" },
+    { id: "6", btn: "Add card" },
+  ];
   return (
-    <div className="p-6 border-4 border-blue-500 rounded-lg ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          <button
-            className="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-semibold rounded-lg shadow-md p-4 transform hover:scale-105 transition-transform duration-300"
-          >
-            <img src="/" alt="" />
-            Click here
-          </button>
-          
-      </div>
+    <div>
+      {tasksBtn.map((task) => (
+        <button key={task.id} className="block w-full py-2 px-4 mb-2 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 font-semibold rounded-lg shadow-md  transform hover:scale-105 transition-transform duration-300">
+          {task.btn}
+        </button>
+      ))}
     </div>
   );
 }

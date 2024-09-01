@@ -6,6 +6,10 @@ import TasksList from "./list_li";
 import ChangingBtn from "./ChangingBtn";
 import FormInp from "./FormInp"
 import Scoreboard from "./Scoreboard"
+import Array_stara from "./Array_stara";
+import ShoppingCart from "./ShoppingCart";
+import RequestingALoan from "./RequestingALoan";
+import RequestTracker from "./RequestTracker";
 const showbtninapp = true;
 
 export default function Home() {
@@ -33,6 +37,18 @@ export default function Home() {
       </div>
       <div className="flex justify-center text-black items-center py-8 bg-gray-300 p-6 shadow-md w-full">
         <Scoreboard/>
+      </div>
+      <div className="flex justify-center text-black items-center py-8 bg-gray-200 p-6 shadow-md w-full">
+      <Array_stara/>
+      </div>
+      <div className="flex justify-center text-black items-center py-8 bg-gray-300 p-6 shadow-md w-full">
+        <ShoppingCart/>
+      </div>
+      <div className="flex justify-center text-black items-center  bg-gray-200  shadow-md w-full">
+        <RequestingALoan/>
+      </div>
+      <div className="flex justify-center text-black items-center py-8 bg-gray-300 p-6 shadow-md w-full">
+        <RequestTracker/>
       </div>
     </div>
   );
